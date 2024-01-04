@@ -25,7 +25,7 @@ class FilterForm extends Component
     }
 
     public function filterListings() {
-
+        $this->validate();
     }
 
     public function render()

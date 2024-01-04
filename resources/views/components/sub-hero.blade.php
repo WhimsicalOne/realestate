@@ -20,6 +20,4 @@
         </div>
     </div>
 
-    <livewire:search-results-listings />
-
 </section>
