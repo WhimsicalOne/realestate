@@ -17,3 +17,4 @@ use Illuminate\Support\Facades\Route;
 // Route::view('/', 'welcome')->name('home');
 
 Route::get('/', [Controller::class, 'home'])->name('home');
+Route::get('/search', [Controller::class, 'searchResults'])->name('search');

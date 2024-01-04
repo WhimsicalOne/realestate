@@ -4944,4 +4944,8 @@ html[dir=rtl] .tns-visually-hidden {
     flex-shrink: 0 !important;
   }
 }
+.searched-for span {
+  --tw-text-opacity: 1 !important;
+  color: rgb(22 163 74/var(--tw-text-opacity)) !important;
+}
 /*# sourceMappingURL=app.css.map */

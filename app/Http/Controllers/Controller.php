@@ -15,4 +15,10 @@ class Controller extends BaseController
         $categories = Category::all(); // Where Featured is true, display the featured categories, but only show the first five.
         return view('pages.home', compact('categories'));
     }
+
+    public function searchResults() {
+        $title = 'Search Results';
+        $background = asset('images/01.jpg');
+        return view('pages.search', compact('title', 'background'));
+    }
 }
