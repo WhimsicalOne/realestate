@@ -1,7 +1,7 @@
 <section class="relative py-16 lg:py-24">
 
     <div class="container relative">
-        @if($listings)
+        @if($listings->isNotEmpty())
             <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[30px]">
                 @foreach ($listings as $listing)
                     <div class="overflow-hidden duration-500 ease-in-out bg-white shadow group rounded-xl dark:bg-slate-900 hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700">
