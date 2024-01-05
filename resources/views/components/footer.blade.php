@@ -11,12 +11,7 @@
                                 <p class="max-w-xl mx-auto text-slate-400">Subscribe to get latest updates and information.</p>
                             </div>
 
-                            <div class="subcribe-form z-1">
-                                <form class="relative max-w-lg md:ms-auto">
-                                    <input type="email" id="subcribe" name="email" class="bg-white rounded-full shadow dark:bg-slate-900 dark:shadow-gray-700" placeholder="Enter your email">
-                                    <button type="submit" class="text-white bg-green-600 rounded-full btn hover:bg-green-700">Subscribe</button>
-                                </form><!--end form-->
-                            </div>
+                            <livewire:subscription-form />
                         </div>
 
                         <div class="absolute -top-5 -start-5">

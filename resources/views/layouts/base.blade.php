@@ -28,9 +28,8 @@
 
     <body>
         <x-header />
-
+            @include('partials._notification')
             @yield('body')
-
         <x-footer />
     </body>
 </html>
