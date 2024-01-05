@@ -28,6 +28,9 @@
 
     <body>
         <x-header />
-        @yield('body')
+
+            @yield('body')
+
+        <x-footer />
     </body>
 </html>
