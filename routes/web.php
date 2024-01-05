@@ -1,8 +1,9 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
-
+use App\Livewire\ShowCategoryListings;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,3 +19,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [Controller::class, 'home'])->name('home');
 Route::get('/search', [Controller::class, 'searchResults'])->name('search');
+
+Route::get('/category/{category:name}', ShowCategoryListings::class)->name('category.single');
