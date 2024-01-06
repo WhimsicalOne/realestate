@@ -20,9 +20,9 @@ class Wish extends Component
             $user->wishes()->create([
                 'listing_id' => $listing,
             ]);
-            Toaster::success('Listing added to your wishlist.');
+            Toaster::success('AW!❤ New Wish Added!');
         } else {
-            Toaster::error('This has been added already. Please try something else.');
+            Toaster::error('Grr!😒 You added this already!');
         }
     }
 

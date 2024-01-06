@@ -2,9 +2,10 @@
 
 namespace App\Livewire;
 
-use App\Models\Subscription;
-use Livewire\Attributes\Validate;
 use Livewire\Component;
+use App\Models\Subscription;
+use Masmerise\Toaster\Toaster;
+use Livewire\Attributes\Validate;
 
 class SubscriptionForm extends Component
 {
@@ -19,7 +20,7 @@ class SubscriptionForm extends Component
             'email' => $this->email
         ]);
 
-        $this->dispatch('process-swall', ['type' => 'success']);
+        Toaster::success('Yaay! You have subscribed!');
 
         $this->reset();
     }
