@@ -27,4 +27,8 @@ class Listing extends Model
         return $this->hasMany(PropertyImages::class);
     }
 
+    public function wishes() {
+        return $this->belongsToMany(Listing::class, Wish::class);
+    }
+
 }

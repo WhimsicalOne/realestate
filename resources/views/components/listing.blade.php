@@ -1,9 +1,7 @@
 <div class="overflow-hidden duration-500 ease-in-out bg-white shadow group rounded-xl dark:bg-slate-900 hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700">
     <div class="relative">
         <img src="{{ asset('images/05.jpg') }}" alt="{{ $listing->name }}">
-        <div class="absolute top-4 end-4">
-            <a href="javascript:void(0)" class="bg-white rounded-full shadow btn btn-icon dark:bg-slate-900 dark:shadow-gray-700 text-slate-100 dark:text-slate-700 focus:text-red-600 dark:focus:text-red-600 hover:text-red-600 dark:hover:text-red-600"><i class="mdi mdi-heart text-[20px]"></i></a>
-        </div>
+        <livewire:wish :listing="$listing"/>
     </div>
 
     <div class="p-6">
