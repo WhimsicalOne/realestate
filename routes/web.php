@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\EmailVerificationController;
 use App\Http\Controllers\Auth\LogoutController;
+use App\Http\Controllers\Controller;
 use App\Livewire\Auth\Login;
 use App\Livewire\Auth\Passwords\Confirm;
 use App\Livewire\Auth\Passwords\Email;
@@ -21,7 +22,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'welcome')->name('home');
+Route::get('/', [Controller::class, 'home'])->name('home');
+Route::get('/search', [Controller::class, 'search'])->name('search');
 
 Route::middleware('guest')->group(function () {
     Route::get('login', Login::class)
@@ -51,6 +53,6 @@ Route::middleware('auth')->group(function () {
         ->middleware('signed')
         ->name('verification.verify');
 
-    Route::post('logout', LogoutController::class)
+    Route::get('logout', LogoutController::class)
         ->name('logout');
 });

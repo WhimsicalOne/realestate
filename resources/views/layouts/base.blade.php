@@ -15,6 +15,7 @@
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
         @livewireStyles
@@ -25,6 +26,8 @@
     </head>
 
     <body>
+        <x-header />
         @yield('body')
+        <x-footer />
     </body>
 </html>
