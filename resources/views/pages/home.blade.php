@@ -8,7 +8,7 @@
         <div class="grid md:grid-cols-12 grid-cols-1 items-center gap-[30px]">
             <div class="md:col-span-5">
                 <div class="relative">
-                    <img src="assets/images/about.jpg" class="shadow-md rounded-xl" alt="">
+                    <img src="{{ asset('images/about.jpg') }}" class="shadow-md rounded-xl" alt="">
                     <div class="absolute text-center bottom-2/4 translate-y-2/4 start-0 end-0">
                         <a href="#!" data-type="youtube" data-id="yba7hPeTSjk" class="inline-flex items-center justify-center w-20 h-20 text-green-600 bg-white rounded-full shadow-md lightbox dark:shadow-gyay-700 dark:bg-slate-900">
                             <i class="inline-flex items-center justify-center text-2xl mdi mdi-play"></i>

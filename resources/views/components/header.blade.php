@@ -7,11 +7,17 @@
         </a>
 
         <div id="navigation">
-            <ul class="navigation-menu justify-end">
+            <ul class="justify-end navigation-menu">
                 <li><a href="#">Buy</a></li>
                 <li><a href="#">Sell</a></li>
                 <li><a href="#">Agents</a></li>
                 <li><a href="#">Contact</a></li>
+                @auth
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="{{ route('logout') }}">Log Out</a></li>
+                @else
+                    <li><a href="{{ route('login') }}">Login</a></li>
+                @endauth
             </ul>
         </div>
     </div>
