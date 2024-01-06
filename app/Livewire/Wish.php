@@ -5,6 +5,7 @@ namespace App\Livewire;
 use App\Models\Listing;
 use Livewire\Component;
 use App\Models\Wish as W;
+use Masmerise\Toaster\Toaster;
 
 class Wish extends Component
 {
@@ -19,15 +20,11 @@ class Wish extends Component
             $user->wishes()->create([
                 'listing_id' => $listing,
             ]);
-            dd('Added.');
+            Toaster::success('Listing added to your wishlist.');
         } else {
-            dd('This exists.');
+            Toaster::error('This has been added already. Please try something else.');
         }
-
-
     }
-
-
 
     public function mount($listing = null)
     {

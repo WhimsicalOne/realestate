@@ -28,6 +28,8 @@
     <body>
         <x-header />
         @yield('body')
+
         <x-footer />
+        <x-toaster-hub />
     </body>
 </html>
