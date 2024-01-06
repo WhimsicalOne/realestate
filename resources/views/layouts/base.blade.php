@@ -15,21 +15,16 @@
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
         @livewireStyles
         @livewireScripts
 
         <!-- CSRF Token -->
-        {{-- https://github.com/midzer/tobii?tab=readme-ov-file --}}
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
 
     <body>
-        <x-header />
-            @include('partials._notification')
-            @yield('body')
-        <x-footer />
+        @yield('body')
     </body>
 </html>
