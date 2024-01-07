@@ -1,7 +1,9 @@
 <div class="overflow-hidden duration-500 ease-in-out bg-white shadow group rounded-xl dark:bg-slate-900 hover:shadow-xl dark:hover:shadow-xl dark:shadow-gray-700 dark:hover:shadow-gray-700">
     <div class="relative">
         <img src="{{ asset('images/05.jpg') }}" alt="{{ $listing->name }}">
-        <livewire:wish :listing="$listing"/>
+        @auth
+            <livewire:wish :listing="$listing" />
+        @endauth
     </div>
 
     <div class="p-6">

@@ -20,7 +20,7 @@ class Listings extends Component
     }
 
     private function categoryWithListings() {
-        return Category::find($this->category)->listings()->paginate(20);
+        return is_null($this->category) ? collect() : Category::find($this->category)->listings()->paginate(20);
     }
 
     private function results($term) {

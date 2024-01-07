@@ -10,7 +10,7 @@
     ?>
     <a
         href="#"
-        class="bg-white rounded-full shadow btn btn-icon dark:bg-slate-900 dark:shadow-gray-700 {{ $classes }}">
+        class="bg-white rounded-full shadow btn btn-icon dark:bg-slate-900 dark:shadow-gray-700 duration-300 ease-in-out {{ $classes }}">
         <i class="mdi mdi-heart text-[20px]"></i>
     </a>
 </div>

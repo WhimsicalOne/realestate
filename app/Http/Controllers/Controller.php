@@ -15,7 +15,7 @@ class Controller extends BaseController
 
     public function home() {
         $categories = Category::all();
-        $listings = Listing::where('is_featured', 1)->get();
+        $listings = Listing::where('is_featured', 1)->take(3)->get();
         return view('pages.home', compact('categories', 'listings'));
     }
 
