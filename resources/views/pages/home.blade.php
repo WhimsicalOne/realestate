@@ -84,6 +84,8 @@
 
     <x-featured-listings :listings="$listings" />
 
+    <x-review-container :reviews="$reviews" />
+
 @endsection
 
 

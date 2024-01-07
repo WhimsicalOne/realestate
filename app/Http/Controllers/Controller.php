@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Listing;
+use App\Models\Review;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -16,7 +17,9 @@ class Controller extends BaseController
     public function home() {
         $categories = Category::all();
         $listings = Listing::where('is_featured', 1)->take(3)->get();
-        return view('pages.home', compact('categories', 'listings'));
+        $reviews = Review::all();
+
+        return view('pages.home', compact('categories', 'listings', 'reviews'));
     }
 
     public function search() {
