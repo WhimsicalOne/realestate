@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('agent_role', function (Blueprint $table) {
-            $table->increments('id');
-            $table->unsignedBigInteger('agent_id');
-            $table->unsignedBigInteger('role_id');
+        Schema::create('role_user', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreignId('role_id');
         });
     }
 
@@ -23,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('agent_role');
+        Schema::dropIfExists('role_user');
     }
 };

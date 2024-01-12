@@ -11,7 +11,7 @@ class Role extends Model
 
     public $guarded = [];
 
-    public function agents() {
-        return $this->belongsTo(Agent::class, 'agent_id');
+    public function users() {
+        return $this->belongsTo(User::class)->using(RoleUser::class);
     }
 }

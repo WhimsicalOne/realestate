@@ -43,8 +43,13 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-    public function wishes() {
+    public function wishes()
+    {
         return $this->hasMany(Wish::class);
+    }
+
+    public function role() {
+        return $this->belongsTo(Role::class);
     }
 
 }

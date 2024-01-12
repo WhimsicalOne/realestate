@@ -23,6 +23,7 @@
                     <li><a href="#dashboard">Dashboard</a></li>
                     <li><a href="{{ route('logout') }}">Log Out</a></li>
                 @else
+                    <li><a href="{{ route('register') }}">Register</a></li>
                     <li><a href="{{ route('login') }}">Login</a></li>
                 @endauth
             </ul>
