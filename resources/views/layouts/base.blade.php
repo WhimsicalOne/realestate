@@ -18,6 +18,14 @@
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+
+        <style>
+            [x-cloak] {
+                display: none !important;
+            }
+        </style>
+
+        @filamentStyles
         @livewireStyles
         @livewireScripts
 
@@ -32,6 +40,7 @@
         <x-footer />
         <x-toaster-hub />
 
+        @filamentScripts
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     </body>
 </html>

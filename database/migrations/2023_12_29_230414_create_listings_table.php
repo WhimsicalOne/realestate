@@ -30,7 +30,7 @@ return new class extends Migration
             $table->string('zip')->nullable();
 
             $table->foreignId('category_id')->on('categories');
-            $table->foreignId('agent_id')->nullable()->on('agents');
+            $table->foreignId('user_id')->nullable()->on('users');
             $table->foreignId('type_id')->on('types');
             $table->unsignedBigInteger('property_images_id')->nullable()->references('id')->on('property_images')->onDelete('cascade');
 
